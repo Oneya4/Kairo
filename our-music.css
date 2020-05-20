@@ -1,0 +1,14 @@
+.youtube-videos{
+	display: grid;
+	background: url(media/logo-dark.jpeg);
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1.5rem;
+}
+
+
+@media screen and (max-width: 900px){
+	.youtube-videos{
+		display: initial;
+	}
+}
+ 
