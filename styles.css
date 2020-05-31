@@ -312,7 +312,6 @@ header{
   position: absolute;
   right: 0;
   transform: translateX(-50%);
-  margin-top: 0;
 }
 
 .back-to-top i{
@@ -330,7 +329,7 @@ header{
 }
 
 .socialmedia{
-  background-color: #222;
+  background: linear-gradient(to right, #333, #333, #fff);
   padding: 1.2rem;
   overflow: hidden;
 }
@@ -358,6 +357,7 @@ header{
   cursor: pointer;
   font-size: 2.0rem;
   background-color: var(--secondary-font-color);
+  border-radius: 50%;
 }
 
 /*media queries*/
