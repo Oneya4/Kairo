@@ -7,6 +7,7 @@
 	<title>KaiRO</title>
 	<!--Font awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -58,7 +59,7 @@
 					<img src="media/split1.jpg">
 					<img src="media/split2.jpg">
 				</div>
-				<div class="band-description padding-right animate-left">
+				<div class="band-description padding-right" data-aos="fade-left">
 					<div class="global-headline">
 						<h1 class="headline headline-dark">Our Story</h1>
 					</div>
@@ -171,5 +172,7 @@
 	</footer>
 
 <script src="scripts.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
