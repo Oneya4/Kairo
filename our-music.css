@@ -1,24 +1,237 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/*header section*/
+header{
+  	width: 10%;
+  	position: absolute;
+  	top: 0;
+  	left: 90%;
+}
+
+.nav{
+  	height: 7.2rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.menu{
+  	display: inline-block;
+  	cursor: pointer;
+  	color: #fff;
+  	font-size: 2.2rem;
+  	position: fixed;
+  	top: 5%;
+  	right: 2.5rem;
+  	cursor: pointer;
+  	z-index: 1500;
+}
+
+.b1, .b2, .b3 {
+  	width: 25px;
+  	height: 5px;
+  	background-color: #fff;
+  	margin: 4px 0;
+  	transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .b1 {
+  	-webkit-transform: rotate(-45deg) translate(-6px, 4px);
+  	transform: rotate(-45deg) translate(-6px, 4px);
+}
+
+/* Fade out the second bar */
+.change .b2 {
+  	opacity: 0;
+}
+
+/* Rotate last bar */
+.change .b3 {
+  	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+  	transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.nav-list{
+  	list-style: none;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 80%;
+  	height: 100%;
+  	background-color: var(--main-font-color-dark);
+  	padding: 4.4rem;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-around;
+  	z-index: 1250;
+  	transform: translateX(-100%);
+  	transition: transform .5s;
+}
+
+.nav::before{
+  	content: '';
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100vw;
+  	height: 100vh;
+  	background-color: rgba(0,0,0,.8);
+  	z-index: 1000;
+  	opacity: 0;
+  	transform: scale(0);
+  	transition: opacity .5s;
+}
+
+.open .nav-list{
+  	transform: translateX(0);
+}
+
+.open .nav::before{
+  	opacity: 1;
+  	transform: scale(1);
+}
+
+.nav-item{
+  	border-bottom: 2px solid rgba(255,255,255,.3);
+}
+
+.nav-link{
+  	display: block;
+  	color: #fff;
+  	text-transform: uppercase;
+  	font-size: 1.6rem;
+  	letter-spacing: 2px;
+  	margin-right: -2px;
+  	transition: color .5s;
+}
+
+.nav-link:hover{
+  	color: var(--secondary-font-color);
+}
+
+/*youtube APIs*/
+.container{
+	height: 100%;
+	width: 100%;
+}
+
 .youtube-videos{
+	position: absolute;
+	top: 18%;
+	left: 0;
 	width: 100%;
 	background: url(media/logo-dark.jpeg) center, no-repeat;
 	background-size: 100%;
+	display: flex;
+	flex: 2;
+	flex-wrap: wrap;
 	align-items: center;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 1.5rem;
+	justify-content: center;
 }
 
-@media screen and (max-width: 900px){
-	.youtube-videos{
-		display: block;
-		align-items: center;
-		justify-content: center;
-	}
+.video{
+	padding: 1rem;
+}
 
-	.video{
-		width: 100%;
-		height: 100%;
-		border-radius: 20px;
-	}
+/*footer*/
+.socialmedia{
+	position: absolute;
+	top: 0;
+ 	width: 100%;
+  	background-color: #222;
+  	padding: 1.2rem;
+  	overflow: hidden;
+}
+
+.ft-paragraph{
+  	color: #fff;
+  	letter-spacing: 1px;
+  	right: -1px;
+}
+
+.media-list{
+  	display: flex;
+  	flex-direction: row;
+  	list-style: none;
+  	justify-content: center;
+}
+
+.media-item{
+  	color: #fff;
+  	font-size: 1.6rem;
+  	padding: 1rem;
+  	margin: 10px;
+  	border-radius: 50%;
+  	transition: all .7s ease;
+}
+
+.media-item a{
+  	color: #fff;
+}
+
+.media-item:hover{
+  	cursor: pointer;
+  	font-size: 2.0rem;
+  	overflow: hidden;
+  	background-color: var(--secondary-font-color);
+}
+
+/*media queries*/
+@media screen and (min-width: 900px){
+	section{
+     padding-top: 7.9rem;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .nav{
+    justify-content: space-between;
+  }
+
+  .nav-list{
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+  }
+
+  .nav-item{
+    margin: 0 2.4rem;
+    border: none;
+  }
+
+  .nav-item:last-child{
+    margin-right: 0;
+  }
+
+  .nav-link{
+    font-size: 1.3rem;
+  }
+
+  .active{
+    position: relative;
+  }
+
+  .active::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+
 }
  

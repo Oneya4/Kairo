@@ -10,7 +10,34 @@
     <link rel="stylesheet" href="our-music.css">
 </head>
 <body>
-	<div class="container">
+	<header>
+		<div class="container">
+			<nav class="nav">
+				<div class="menu" id="menu-opacity" onclick="myFunction(this)">
+					<div class="b1"></div>
+					<div class="b2"></div>
+					<div class="b3"></div>
+				</div>
+				<a href="index.html" class="logo"></a>
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link active">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="index.html #our-story" class="nav-link">Our Story</a>
+					</li>
+					<li class="nav-item">
+						<a href="our-music.html" class="nav-link">Our Music</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</nav> 
+		</div>  
+	</header>
+	<!--end of header-->
+	<section class="container">
 		<div class="youtube-videos">
 			<iframe class="video" style="border-radius: 20px" width="570" height="400" src="https://www.youtube.com/embed/JL8VxcwVLAA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 			</iframe>
@@ -18,6 +45,27 @@
 			<iframe class="video" style="border-radius: 20px" width="570" height="400" src="https://www.youtube.com/embed/SuItTV1Cs8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<iframe class="video" style="border-radius: 20px" width="570" height="400" src="https://www.youtube.com/embed/wOFg1kimQKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-	</div>
+	</section>
+
+	<footer class="socialmedia">
+		<p class="ft-paragraph">&copy KaiRO | Developed by O'neya Inc.</p>
+		<ul class="media-list">
+			<li class="media-item">
+				<i class="fab fa-facebook-square"></i>
+			</li>
+			<li class="media-item">
+				<a href="https://www.instagram.com/original_kairo/" target="_blank">
+				<i class="fab fa-instagram"></i></a>
+			</li>
+			<li class="media-item">
+				<i class="fab fa-twitter"></i>
+			</li>
+			<li class="media-item">
+				<a href="https://www.youtube.com/channel/UCxi05rie1AHPAnlFr1UVZ2g" target="_blank">
+				<i class="fab fa-youtube"></i></a>
+			</li>
+		</ul>
+	</footer>
+	<script src="scripts.js"></script>
 </body>
 </html>
